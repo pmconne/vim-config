@@ -1,3 +1,35 @@
+" -- Plugins (vundle) {{{
+
+" Set up Vundle
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+
+" List plugins
+Plugin 'pmconne/vim-repositories'
+Plugin 'pmconne/vim-bufclean'
+Plugin 'pmconne/vim-bsiheaders'
+Plugin 'pmconne/vim-autodoc'
+Plugin 'tpope/vim-jdaddy'
+Plugin 'vim-airline/vim-airline'
+
+" Finish setting up Vundle
+
+call vundle#end()
+filetype plugin indent on
+
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+
+" }}}
+
 " -- General config {{{
 set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
@@ -282,10 +314,10 @@ cnoreabbrev rr rr<c-\>esubstitute(getcmdline(), '^rr', 'Rr', '')<enter>
 
 " -- vimrc {{{
 " refresh vimrc as soon as it's edited
-autocmd! bufwritepost _vimrc source d:\r\vim\_vimrc
+autocmd! bufwritepost .vimrc source ~/.vim/.vimrc
 
 " quickly edit vimrc
-nnoremap <leader>ev :e d:\r\\vim\_vimrc<cr>
+nnoremap <leader>ev :e ~/.vim/.vimrc<cr>
 " -- }}}
 
 " -- Navigation shortcuts {{{
