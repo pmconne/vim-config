@@ -1,0 +1,29 @@
+set incsearch
+set hlsearch
+set magic
+
+let mapleader = "\\"
+set wildmenu
+
+" set autoindent
+" set expandtab
+" set shiftwidth=4
+" set softtabstop=4
+" set cinoptions=f1s,{1s,>1s,g-1s,h1s,:-0.1s,=1s
+
+noremap <C-l> <C-W>l
+noremap <C-h> <C-W>h
+
+" C-B cannot be reversed by C-F and vice-versa. C-U and C-D can, but are
+" farther way from each other.
+noremap <C-B> <C-U><C-U>
+noremap <C-F> <C-D><C-D>
+
+" { } move by paragraph by default, this is useless for code. Remap to move to
+" enclosing bracket
+nnoremap { [{
+nnoremap } ]}
+
+" https://github.com/jaredpar/VsVim/wiki/FAQ#backspace
+set backspace=indent,eol,start
+
